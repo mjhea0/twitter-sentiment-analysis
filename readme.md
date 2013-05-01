@@ -8,3 +8,7 @@ This video details how to conduct text sentiment analysis in R using Jeffrey Bea
 Essentially, I show how to pull tweets from the Twitter web API, comparing each word to positive and negative word bank, and then using a basic algorithm to determine the overall sentiment. I also show how to analyze the data. 
 
 This repository includes the algorithm, word banks, output, and R data.
+
+
+
+https://gist.github.com/mjhea0/5497065
