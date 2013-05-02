@@ -10,14 +10,14 @@
 #' @returnType data.frame
 #' @return data.frame of text and corresponding sentiment scores
 #' @author Jefrey Breen <jbreen@cambridge.aero>
-score.sentiment = function(sentences, pos.words, neg.words, .progress='none')
+score.sentiment = function(sentences, pos.words, neg.words, exc.words, .progress='none')
 {
 	require(plyr)
 	require(stringr)
 	
 	# we got a vector of sentences. plyr will handle a list or a vector as an "l" for us
 	# we want a simple array of scores back, so we use "l" + "a" + "ply" = laply:
-	scores = laply(sentences, function(sentence, pos.words, neg.words) {
+	scores = laply(sentences, function(sentence, pos.words, neg.words, exc.words) {
 		
 		# clean up sentences with R's regex-driven global substitute, gsub():
 		sentence = gsub('[[:punct:]]', '', sentence)
@@ -30,6 +30,11 @@ score.sentiment = function(sentences, pos.words, neg.words, .progress='none')
 		word.list = str_split(sentence, '\\s+')
 		# sometimes a list() is one level of hierarchy too much
 		words = unlist(word.list)
+
+                # exclude stop words
+                check <- match(words,exc.words)
+                exc.list <-!is.na(check)
+                words <-words[!exc.list]
 
 		# compare our words to the dictionaries of positive & negative terms
 		pos.matches = match(words, pos.words)
