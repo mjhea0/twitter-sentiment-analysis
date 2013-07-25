@@ -1,6 +1,8 @@
 Twitter Text Sentiment Analysis
 ===============================
 
+**Needs to be updated for Twitter API v 1.1**
+
 Accompanying data files for this Youtube video - [http://www.youtube.com/watch?v=adIvt_luO1o ](http://www.youtube.com/watch?v=adIvt_luO1o )
 
 This video details how to conduct text sentiment analysis in R using Jeffrey Bean's [algorithm](http://jeffreybreen.wordpress.com/2011/07/04/twitter-text-mining-r-slides/). 
