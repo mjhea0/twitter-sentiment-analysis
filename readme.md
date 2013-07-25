@@ -1,7 +1,7 @@
 Twitter Text Sentiment Analysis
 ===============================
 
-**Needs to be updated for Twitter API v 1.1**
+### Needs to be updated for Twitter API v 1.1
 
 Accompanying data files for this Youtube video - [http://www.youtube.com/watch?v=adIvt_luO1o ](http://www.youtube.com/watch?v=adIvt_luO1o )
 
